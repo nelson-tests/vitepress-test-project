@@ -6,7 +6,7 @@ export default defineConfig({
   description: "Project to test vue press",
   lang: 'en-US',
 
-  base: '/test-vuepress-project/',
+  base: '/vitepress-test-project/',
 
   themeConfig: {
     search: {

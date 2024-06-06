@@ -8,6 +8,11 @@ export default defineConfig({
   lang: 'en-US',
 
   base: '/vitepress-test-project/',
+  lastUpdated: true,
+
+  sitemap: {
+    hostname: 'https://nelson-tests.github.io/vitepress-test-project/'
+  },
 
   themeConfig: {
     search: {
@@ -24,11 +29,23 @@ export default defineConfig({
       documentRootPath: '/docs',
 
       removePrefixAfterOrdering: true,
-      prefixSeparator: '.'
+      prefixSeparator: '.',
+
+      useTitleFromFileHeading: true,
+      useTitleFromFrontmatter: true,
     }),
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright © 2019-present Evan You'
+    },
+
+    editLink: {
+      pattern: 'https://github.com/nelson-tests/vitepress-test-project/tree/main/docs/:path'
+    }
   }
 })
